@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#0369A1"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.24" cy="0.22" r="0.72">
+      <stop offset="0" stop-color="#7DD3FC" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#7DD3FC" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#FFFFFF" fill-opacity="0.09"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+  <rect width="1000" height="1000" fill="url(#dots)"/>
+  <rect width="1000" height="1000" fill="url(#glow)"/>
+  <g stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1">
+    <line x1="70" y1="760" x2="930" y2="760"/>
+    <line x1="70" y1="620" x2="930" y2="620"/>
+    <line x1="70" y1="480" x2="930" y2="480"/>
+  </g>
+  <g stroke="#7DD3FC" stroke-width="5" stroke-linecap="round">
+    <line x1="180" y1="712" x2="180" y2="568"/>
+    <rect x="164" y="600" width="32" height="76" fill="#0EA5E9" stroke="none" opacity="0.9"/>
+    <line x1="320" y1="676" x2="320" y2="500"/>
+    <rect x="304" y="528" width="32" height="92" fill="#38BDF8" stroke="none" opacity="0.9"/>
+    <line x1="460" y1="620" x2="460" y2="432"/>
+    <rect x="444" y="468" width="32" height="104" fill="#0EA5E9" stroke="none" opacity="0.9"/>
+    <line x1="600" y1="540" x2="600" y2="360"/>
+    <rect x="584" y="392" width="32" height="96" fill="#38BDF8" stroke="none" opacity="0.9"/>
+    <line x1="740" y1="470" x2="740" y2="286"/>
+    <rect x="724" y="318" width="32" height="108" fill="#7DD3FC" stroke="none"/>
+    <line x1="880" y1="410" x2="880" y2="236"/>
+    <rect x="864" y="262" width="32" height="104" fill="#7DD3FC" stroke="none"/>
+  </g>
+  <polyline points="70,700 200,646 330,604 460,548 590,476 720,404 850,332 930,290" fill="none" stroke="#E0F2FE" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
+  <g fill="#FFFFFF">
+    <circle cx="200" cy="646" r="6"/>
+    <circle cx="460" cy="548" r="6"/>
+    <circle cx="720" cy="404" r="6"/>
+    <circle cx="930" cy="290" r="6"/>
+  </g>
+  <text x="70" y="110" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="7" fill="#BAE6FD">PRODUCTION FX FORECASTING</text>
+  <text x="70" y="905" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="800" fill="#FFFFFF">FX Forecaster</text>
+</svg>

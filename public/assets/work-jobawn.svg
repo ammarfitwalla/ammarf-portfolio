@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#042F2E"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.25" cy="0.22" r="0.7">
+      <stop offset="0" stop-color="#5EEAD4" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#5EEAD4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#FFFFFF" fill-opacity="0.09"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+  <rect width="1000" height="1000" fill="url(#dots)"/>
+  <rect width="1000" height="1000" fill="url(#glow)"/>
+  <g stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1">
+    <line x1="70" y1="740" x2="930" y2="740"/>
+    <line x1="70" y1="590" x2="930" y2="590"/>
+    <line x1="70" y1="440" x2="930" y2="440"/>
+  </g>
+  <g fill="none" stroke="#5EEAD4" stroke-width="4" stroke-linecap="round">
+    <path d="M240 640 L400 480 L560 610 L760 420"/>
+    <path d="M240 520 L410 380 L600 500 L780 330" stroke-opacity="0.45"/>
+  </g>
+  <g fill="#0B3B38" stroke="#99F6E4" stroke-width="4">
+    <rect x="168" y="592" width="144" height="96" rx="12"/>
+    <rect x="336" y="432" width="144" height="96" rx="12"/>
+    <rect x="504" y="562" width="144" height="96" rx="12"/>
+    <rect x="694" y="372" width="144" height="96" rx="12"/>
+  </g>
+  <g fill="none" stroke="#CCFBF1" stroke-width="5" stroke-linecap="round">
+    <path d="M204 628h72M204 652h48"/>
+    <path d="M372 468h72M372 492h48"/>
+    <path d="M540 598h72M540 622h48"/>
+    <path d="M730 408h72M730 432h48"/>
+  </g>
+  <g fill="#5EEAD4">
+    <circle cx="240" cy="640" r="8"/>
+    <circle cx="400" cy="480" r="8"/>
+    <circle cx="560" cy="610" r="8"/>
+    <circle cx="760" cy="420" r="8"/>
+  </g>
+  <text x="70" y="110" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="7" fill="#99F6E4">AI JOB SEARCH &amp; REFERRALS</text>
+  <text x="70" y="905" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="800" fill="#FFFFFF">JobAwn</text>
+</svg>

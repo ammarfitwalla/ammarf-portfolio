@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#170F2B"/>
+      <stop offset="1" stop-color="#4C1D95"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.25" r="0.75">
+      <stop offset="0" stop-color="#C4B5FD" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#C4B5FD" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#FFFFFF" fill-opacity="0.09"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+  <rect width="1000" height="1000" fill="url(#dots)"/>
+  <rect width="1000" height="1000" fill="url(#glow)"/>
+  <g stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1">
+    <line x1="70" y1="760" x2="930" y2="760"/>
+    <line x1="70" y1="620" x2="930" y2="620"/>
+    <line x1="70" y1="480" x2="930" y2="480"/>
+  </g>
+  <g fill="none" stroke="#A78BFA" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="500" cy="560" r="150"/>
+    <circle cx="500" cy="560" r="96" stroke-opacity="0.55"/>
+    <path d="M500 410v-70M500 780v-70M350 560h-70M720 560h-70"/>
+  </g>
+  <g fill="none" stroke="#EDE9FE" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="424" y="500" width="152" height="120" rx="10"/>
+    <path d="M452 536h96M452 564h96M452 592h60"/>
+  </g>
+  <g fill="#C4B5FD">
+    <circle cx="500" cy="410" r="9"/>
+    <circle cx="500" cy="710" r="9"/>
+    <circle cx="350" cy="560" r="9"/>
+    <circle cx="650" cy="560" r="9"/>
+  </g>
+  <g fill="#FFFFFF">
+    <circle cx="812" cy="300" r="5" opacity="0.8"/>
+    <circle cx="196" cy="356" r="4" opacity="0.6"/>
+    <circle cx="742" cy="664" r="4" opacity="0.65"/>
+  </g>
+  <text x="70" y="110" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="7" fill="#DDD6FE">MULTIMODAL FORENSIC AI</text>
+  <text x="70" y="905" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="800" fill="#FFFFFF">Justitia Lens</text>
+</svg>
