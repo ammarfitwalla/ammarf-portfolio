@@ -160,7 +160,15 @@ export default function Home() {
               {PROJECTS.map((p) => (
                 <li key={p.id} data-project={p.id} className="reveal">
                   <div className="stripe animate"></div>
-                  <a href={p.link} target="_blank" rel="noopener noreferrer" className="row">
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="row"
+                    data-umami-event="Project Click"
+                    data-umami-event-project={p.title}
+                    data-umami-event-destination={p.linkType}
+                  >
                     <div className="flex-col">
                       <h4><span>{p.title}</span></h4>
                     </div>
@@ -181,7 +189,15 @@ export default function Home() {
               {PROJECTS.map((p) => (
                 <li key={p.id} className="visible">
                   <div className="single-tile-wrap">
-                    <a href={p.link} target="_blank" rel="noopener noreferrer" className="row">
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="row"
+                      data-umami-event="Project Click"
+                      data-umami-event-project={p.title}
+                      data-umami-event-destination={p.linkType}
+                    >
                       <div className="flex-col">
                         <div className="tile-image">
                           <div

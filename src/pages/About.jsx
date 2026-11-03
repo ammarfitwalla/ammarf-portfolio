@@ -235,6 +235,8 @@ export default function About() {
                   className="btn-click magnetic"
                   data-strength="25"
                   data-strength-text="15"
+                  data-umami-event="Resume Download"
+                  data-umami-event-source="About"
                 >
                   <div className="btn-fill"></div>
                   <span className="btn-text">

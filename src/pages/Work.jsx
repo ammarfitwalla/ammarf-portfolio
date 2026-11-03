@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PROJECTS, WORK_FILTERS } from '../data/projects';
+import { trackEvent } from '../lib/analytics';
 
 export default function Work() {
   const [filter, setFilter] = useState('all');
@@ -60,7 +61,10 @@ export default function Work() {
                     <div
                       key={f.key}
                       className={`btn btn-normal ${f.key}-btn ${filter === f.key ? 'active' : ''}`}
-                      onClick={() => setFilter(f.key)}
+                      onClick={() => {
+                        setFilter(f.key);
+                        trackEvent('Work Filter', { filter: f.label });
+                      }}
                     >
                       <div className="btn-click magnetic" data-strength="25" data-strength-text="15">
                         <div className="btn-fill"></div>
@@ -139,7 +143,14 @@ export default function Work() {
                     data-project={p.id}
                     data-index={idx}
                   >
-                    <a href={p.link} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-umami-event="Project Click"
+                      data-umami-event-project={p.title}
+                      data-umami-event-destination={p.linkType}
+                    >
                       <div className="stripe animate"></div>
                       <div className="row">
                         <div className="flex-col">
@@ -178,7 +189,15 @@ export default function Work() {
                     data-index={idx}
                   >
                     <div className="single-tile-wrap">
-                      <a href={p.link} target="_blank" rel="noopener noreferrer" className="row">
+                      <a
+                        href={p.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="row"
+                        data-umami-event="Project Click"
+                        data-umami-event-project={p.title}
+                        data-umami-event-destination={p.linkType}
+                      >
                         <div className="flex-col">
                           <div className="tile-image">
                             <div
@@ -224,6 +243,7 @@ export default function Work() {
                   className="btn-click magnetic"
                   data-strength="25"
                   data-strength-text="15"
+                  data-umami-event="GitHub Archive Click"
                 >
                   <div className="btn-fill"></div>
                   <span className="btn-text">

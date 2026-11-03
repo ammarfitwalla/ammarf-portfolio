@@ -99,6 +99,8 @@ export default function DrawerMenu({ onClose }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-click magnetic"
+                    data-umami-event="Social Click"
+                    data-umami-event-network="LinkedIn"
                   >
                     <span className="btn-text">
                       <span className="btn-text-inner">LinkedIn</span>
@@ -111,6 +113,8 @@ export default function DrawerMenu({ onClose }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-click magnetic"
+                    data-umami-event="Social Click"
+                    data-umami-event-network="GitHub"
                   >
                     <span className="btn-text">
                       <span className="btn-text-inner">GitHub</span>
@@ -121,6 +125,8 @@ export default function DrawerMenu({ onClose }) {
                   <a
                     href="mailto:ammarfitwalla@gmail.com"
                     className="btn-click magnetic"
+                    data-umami-event="Social Click"
+                    data-umami-event-network="Email"
                   >
                     <span className="btn-text">
                       <span className="btn-text-inner">Email</span>
@@ -133,6 +139,7 @@ export default function DrawerMenu({ onClose }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-click magnetic"
+                    data-umami-event="Website Click"
                   >
                     <span className="btn-text">
                       <span className="btn-text-inner">Website</span>

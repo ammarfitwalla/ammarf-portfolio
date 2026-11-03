@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { trackEvent } from '../lib/analytics';
 
 export default function Contact() {
   const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success' | 'error'
@@ -44,6 +45,9 @@ export default function Contact() {
         if (data.success) {
           setStatus('success');
           setFeedback("Thank You");
+          trackEvent('Contact Submit', {
+            service: String(formData.get('service') || 'unspecified'),
+          });
           form.reset();
           setTimeout(() => {
             setStatus('idle');
@@ -74,6 +78,9 @@ export default function Contact() {
         if (res.ok) {
           setStatus('success');
           setFeedback("Thank You");
+          trackEvent('Contact Submit', {
+            service: String(formData.get('service') || 'unspecified'),
+          });
           form.reset();
           setTimeout(() => {
             setStatus('idle');
@@ -205,14 +212,14 @@ export default function Contact() {
               <h5>Contact Details</h5>
               <ul className="links-wrap">
                 <li className="btn btn-link btn-link-external">
-                  <a href="mailto:ammarfitwalla@gmail.com" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                  <a href="mailto:ammarfitwalla@gmail.com" className="btn-click magnetic" data-strength="20" data-strength-text="10" data-umami-event="Social Click" data-umami-event-network="Email">
                     <span className="btn-text">
                       <span className="btn-text-inner">ammarfitwalla@gmail.com</span>
                     </span>
                   </a>
                 </li>
                 <li className="btn btn-link btn-link-external">
-                  <a href="https://ammarf.com" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                  <a href="https://ammarf.com" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10" data-umami-event="Website Click">
                     <span className="btn-text">
                       <span className="btn-text-inner">ammarf.com</span>
                     </span>
@@ -227,14 +234,14 @@ export default function Contact() {
               <h5>Socials</h5>
               <ul className="links-wrap">
                 <li className="btn btn-link btn-link-external">
-                  <a href="https://www.linkedin.com/in/ammarfitwalla/" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                  <a href="https://www.linkedin.com/in/ammarfitwalla/" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10" data-umami-event="Social Click" data-umami-event-network="LinkedIn">
                     <span className="btn-text">
                       <span className="btn-text-inner">LinkedIn</span>
                     </span>
                   </a>
                 </li>
                 <li className="btn btn-link btn-link-external">
-                  <a href="https://github.com/ammarfitwalla" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                  <a href="https://github.com/ammarfitwalla" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10" data-umami-event="Social Click" data-umami-event-network="GitHub">
                     <span className="btn-text">
                       <span className="btn-text-inner">GitHub</span>
                     </span>
@@ -248,6 +255,8 @@ export default function Contact() {
                   className="btn-click magnetic"
                   data-strength="25"
                   data-strength-text="15"
+                  data-umami-event="Resume Download"
+                  data-umami-event-source="Contact"
                 >
                   <div className="btn-fill"></div>
                   <span className="btn-text">
@@ -277,21 +286,21 @@ export default function Contact() {
                 <h5>Socials</h5>
                 <ul>
                   <li className="btn btn-link btn-link-external">
-                    <a href="https://www.linkedin.com/in/ammarfitwalla/" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                    <a href="https://www.linkedin.com/in/ammarfitwalla/" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10" data-umami-event="Social Click" data-umami-event-network="LinkedIn">
                       <span className="btn-text">
                         <span className="btn-text-inner">LinkedIn</span>
                       </span>
                     </a>
                   </li>
                   <li className="btn btn-link btn-link-external">
-                    <a href="https://github.com/ammarfitwalla" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                    <a href="https://github.com/ammarfitwalla" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10" data-umami-event="Social Click" data-umami-event-network="GitHub">
                       <span className="btn-text">
                         <span className="btn-text-inner">GitHub</span>
                       </span>
                     </a>
                   </li>
                   <li className="btn btn-link btn-link-external">
-                    <a href="https://ammarf.com" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                    <a href="https://ammarf.com" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10" data-umami-event="Website Click">
                       <span className="btn-text">
                         <span className="btn-text-inner">Website</span>
                       </span>

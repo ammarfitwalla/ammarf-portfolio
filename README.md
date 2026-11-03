@@ -22,6 +22,22 @@ npm run preview
 `dist/404.html` so client-side routes such as `/about` and `/work` work when
 served by GitHub Pages.
 
+## Analytics
+
+The site uses privacy-friendly, cookie-free analytics from Umami Cloud. The
+tracker only runs on `ammarf.com` and `www.ammarf.com`.
+
+Custom events:
+
+- `Resume Download` - About and Contact CV buttons
+- `Contact Submit` - successful contact form submission
+- `Project Click` - project cards, with project and destination data
+- `Social Click` - LinkedIn, GitHub, and email links
+- `Website Click` - links back to ammarf.com
+- `Work Filter` - Work page filter changes
+- `GitHub Archive Click` - Work page GitHub button
+- `CTA Click` - Get in touch call-to-action
+
 ## Deployment
 
 The site deploys automatically to GitHub Pages on every push to `main` through

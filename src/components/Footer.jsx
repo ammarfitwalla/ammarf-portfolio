@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTransition } from '../context/TransitionContext';
+import { trackEvent } from '../lib/analytics';
 
 export default function Footer() {
   const { navigateTo } = useTransition();
@@ -47,6 +48,7 @@ export default function Footer() {
                       href="/contact"
                       onClick={(e) => {
                         e.preventDefault();
+                        trackEvent('CTA Click', { cta: 'Get in touch' });
                         navigateTo('/contact', 'Contact');
                       }}
                       className="btn-click magnetic"
@@ -65,7 +67,7 @@ export default function Footer() {
             <div className="row">
               <div className="flex-col">
                 <div className="btn btn-normal">
-                  <a href="mailto:ammarfitwalla@gmail.com" className="btn-click magnetic" data-strength="25" data-strength-text="15">
+                  <a href="mailto:ammarfitwalla@gmail.com" className="btn-click magnetic" data-strength="25" data-strength-text="15" data-umami-event="Social Click" data-umami-event-network="Email">
                     <div className="btn-fill"></div>
                     <span className="btn-text">
                       <span className="btn-text-inner change">ammarfitwalla@gmail.com</span>
@@ -73,7 +75,7 @@ export default function Footer() {
                   </a>
                 </div>
                 <div className="btn btn-normal">
-                  <a href="https://ammarf.com" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="25" data-strength-text="15">
+                  <a href="https://ammarf.com" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="25" data-strength-text="15" data-umami-event="Website Click">
                     <div className="btn-fill"></div>
                     <span className="btn-text">
                       <span className="btn-text-inner change">ammarf.com</span>
@@ -107,6 +109,8 @@ export default function Footer() {
                         className="btn-click magnetic"
                         data-strength="20"
                         data-strength-text="10"
+                        data-umami-event="Social Click"
+                        data-umami-event-network="LinkedIn"
                       >
                         <span className="btn-text">
                           <span className="btn-text-inner">LinkedIn</span>
@@ -121,6 +125,8 @@ export default function Footer() {
                         className="btn-click magnetic"
                         data-strength="20"
                         data-strength-text="10"
+                        data-umami-event="Social Click"
+                        data-umami-event-network="GitHub"
                       >
                         <span className="btn-text">
                           <span className="btn-text-inner">GitHub</span>
@@ -133,6 +139,8 @@ export default function Footer() {
                         className="btn-click magnetic"
                         data-strength="20"
                         data-strength-text="10"
+                        data-umami-event="Social Click"
+                        data-umami-event-network="Email"
                       >
                         <span className="btn-text">
                           <span className="btn-text-inner">Email</span>
